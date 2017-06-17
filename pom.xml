@@ -9,10 +9,9 @@
     <description>This is simple example for spring and dynamodb</description>
 
     <parent>
-        <artifactId>parent-boot-5</artifactId>
-        <groupId>com.ariyekal</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../parent-boot-5</relativePath>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.3.RELEASE</version>
     </parent>
 
     <properties>
@@ -45,6 +44,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -121,6 +125,10 @@
                 <artifactId>maven-war-plugin</artifactId>
             </plugin>
 
+              <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+              </plugin>
         </plugins>
 
     </build>
